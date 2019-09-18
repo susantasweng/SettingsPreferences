@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/root_title">
+
+    <PreferenceCategory
+        android:key="custom_category"
+        android:title="Sound">
+
+        <SeekBarPreference
+            android:dialogMessage="Customise Notification Ringtone for you"
+            android:dialogTitle="Notification Ringtone"
+            android:key="notification_ringtone"
+            android:summary="Customise Notification Ringtone for you"
+            android:title="Notification Ringtone"
+            android:icon="@drawable/speaker" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

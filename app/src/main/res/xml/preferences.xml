@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Sync Information"
+        android:key="sync_category">
+
+        <CheckBoxPreference
+            android:key="perform_sync"
+            android:summary="Enable or disable data sync"
+            android:title="Enable Auto Sync"
+            android:defaultValue="true"/>
+
+        <ListPreference
+            android:key="sync_interval"
+            android:title="Sync interval"
+            android:summary="Define how often sync will be performed"
+            android:defaultValue="1000"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:dependency="perform_sync"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Personal Informations"
+        android:key="personal_category">
+
+
+        <EditTextPreference
+            android:key="full_name"
+            android:title="Name"
+            android:summary="Enter Your Complete Name"
+            android:dialogTitle="Your Name"
+            android:dialogMessage="Enter Your Complete Name"
+            android:defaultValue="ABC"
+            android:inputType="textCapWords"/>
+
+        <EditTextPreference
+            android:key="email_address"
+            android:title="Email Address"
+            android:summary="Enter Your Email Address"
+            android:dialogTitle="Enter Your Email Address"
+            android:dialogMessage="Enter Your Email Address"
+            android:defaultValue="abc@gmail.com"
+            android:inputType="textEmailAddress"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="General">
+        <Preference
+            android:key="general_preference"
+            android:title="General Settings"
+            android:summary="Update the phone general info"
+            android:icon="@drawable/profile"  />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notification_category"
+        android:title="Notification">
+        <Preference
+            android:key="notification_preference"
+            android:title="Notification Settings"
+            android:summary="Update the notification settings"
+            android:icon="@drawable/push_notification" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="sync_category"
+        android:title="Sync Information">
+        <Preference
+            android:key="sync_preference"
+            android:summary="Update the sync accounts"
+            android:title="Sync Settings"
+            android:icon="@drawable/sync" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="sound_category"
+        android:title="Sound">
+        <Preference
+            android:key="sound_preference"
+            android:title="Sound Settings"
+            android:summary="Update device sounds"
+            android:icon="@drawable/speaker" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
